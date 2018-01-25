@@ -24,8 +24,8 @@ public class Student extends User {
 	}
 
 	
-	public Student(int id, String firstname, String surname) {
-		super(id, firstname, surname);
+	public Student(int id, String firstname, String surname,String login,String password) {
+		super(id, firstname, surname,login,password);
 		// TODO Auto-generated constructor stub
 	}
 

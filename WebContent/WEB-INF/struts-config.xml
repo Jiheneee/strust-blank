@@ -40,6 +40,10 @@
 <!-- ================================================ Form Bean Definitions -->
 
     <form-beans>
+  		<form-bean
+            name="loginForm"
+            type="com.master.datascale.projet.bean.User"/>  
+  
     <!-- sample form bean descriptor for an ActionForm
         <form-bean
             name="inputForm"
@@ -91,7 +95,17 @@
             <!-- Forwards to Welcome.jsp -->
         <action
             path="/Welcome"
-            forward="/pages/Welcome.jsp"/>
+            forward="/Acceuil.html"/>
+		
+		<action
+            path="/login"
+            type="com.master.datascale.projet.action"
+            name="loginForm">
+        <forward name="admin" path="/admin.html"/>
+        <forward name="student" path="/student.html"/>
+        <forward name="teacher" path="/teacher.html"/>
+		</action>
+		
 
     <!-- sample input and input submit actions
 
