@@ -9,6 +9,11 @@ import org.apache.struts.action.ActionForm;
  */
 public class User extends ActionForm {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public User() {
 		// TODO Auto-generated constructor stub
 	}
@@ -46,6 +51,18 @@ public class User extends ActionForm {
 		this.id = id;
 		this.firstname = firstname;
 		this.surname = surname;
+		this.login = login;
+		this.password = password;
+	}
+	/*/
+	
+	/**
+	 * Constructor using fields
+	 * @param login the first name of the user
+	 * @param password the last name of the user
+	 */
+	public User(String login, String password) {
+		super();
 		this.login = login;
 		this.password = password;
 	}
