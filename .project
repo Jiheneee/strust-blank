@@ -3,13 +3,10 @@
 	<name>struts-blank</name>
 	<comment></comment>
 	<projects>
-		<project>struts-tiles-1.3.10</project>
-		<project>struts-taglib-1.3.10</project>
 		<project>commons-chain-1.2</project>
 		<project>commons-validator-1.3.1</project>
 		<project>antlr-2.7.2</project>
 		<project>commons-digester-1.8</project>
-		<project>struts-core-1.3.10</project>
 		<project>commons-beanutils-1.8.0</project>
 		<project>commons-logging-1.0.4</project>
 	</projects>

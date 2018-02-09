@@ -17,7 +17,7 @@
   
   <div class="row" ><br><br><br>
     <div class="col-md-4">
-      <section class="login-form">
+      <section class="login-form" role="login">
         <form method="post" action="login.do" role="login">
 		  <img src="content/img/quizLogin.png" class="img-responsive" alt="" />
           <input  type="text" name="login" placeholder="Login"  class="form-control input-lg" required/>       

@@ -81,6 +81,7 @@ header.masthead p {
 .btn-primary {
     background-color: #f05f40;
     border-color: #f05f40;
+	border-color:#f05f40;
 }
 .btn-xl {
     padding: 1rem 2rem;
