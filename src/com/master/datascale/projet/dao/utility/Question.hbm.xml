@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping package="com.master.datascale.projet.bean">
+  <class name="Question" table="Question">
+  
+  <id name="id" column="id">
+  		<generator class="increment"/>
+  	</id>
+  	
+  	 <many-to-one name="Qcm" table="Qcm" fetch="select"  >
+    	<column name="id" not-null="true"/>
+    </many-to-one>
+    
+  	<property name="entitled" type="java.lang.String">
+      <column name="entitled"/> 
+    </property>
+    
+    <property name="goodAnswer" type="java.lang.String">
+      <column name="goodAnswer"/> 
+    </property>
+   
+</class>
+</hibernate-mapping>
