@@ -22,9 +22,9 @@
 				column="user_id"></many-to-many>
 		</set>
 
-		 <!-- set name="Questions" table="Question" cascade="all"> 
+		 <set name="Questions" table="Question" cascade="all"> 
 			<key column="idQcm" not-null="true" /> 
 			<many-to-many column="idQuestion" class="com.master.datascale.projet.bean.Question" unique="true" /> 
-		</set-->
+		</set>
 	</class>
 </hibernate-mapping>

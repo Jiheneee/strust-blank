@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="com.master.datascale.projet.bean">
 	<class name="Question" table="Question">
 
 		<id name="id" column="idQuestion">
 			<generator class="increment" />
 		</id>
-		<!-- join table="Qcm" inverse="true">
-			<key column="idQuestion"/>
-			<many-to-one name="qcm" column="idQcm" not-null="true" />
-		</join-->
+
 		<!-- <set name="Answer" table="Answer" inverse="true" lazy="true" fetch="select"> 
 			<key column="id" not-null="true" /> <one-to-many class="Question" /> </set> -->
 
@@ -17,6 +17,10 @@
 		<property name="entitled" />
 
 		<property name="goodAnswer" />
-
+		
+		<join table="Qcm" inverse="true">
+			<key column="idQuestion" />
+			<many-to-one name="qcm" column="idQcm" not-null="true" />
+		</join>
 	</class>
 </hibernate-mapping>

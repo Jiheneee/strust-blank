@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="com.master.datascale.projet.bean">
   <class name="Answer" table="Answer">
   
@@ -10,9 +13,9 @@
       <column name="value"/> 
     </property>
     
-    <many-to-one name="Question" table="Question" fetch="select"  >
+    <!-- <many-to-one name="Question" table="Question" fetch="select"  >
     	<column name="id" not-null="true"/>
-    </many-to-one>
+    </many-to-one> -->
     
 </class>
 </hibernate-mapping>
