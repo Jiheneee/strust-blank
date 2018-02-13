@@ -10,5 +10,9 @@
       <column name="value"/> 
     </property>
     
+    <many-to-one name="Question" table="Question" fetch="select"  >
+    	<column name="id" not-null="true"/>
+    </many-to-one>
+    
 </class>
 </hibernate-mapping>

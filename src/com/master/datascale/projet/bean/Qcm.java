@@ -1,5 +1,8 @@
 package com.master.datascale.projet.bean;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.apache.struts.action.ActionForm;
 
 /**
@@ -10,6 +13,11 @@ import org.apache.struts.action.ActionForm;
 public class Qcm extends ActionForm{
 
 	private static final long serialVersionUID = 1L;
+
+	
+	private Set<Student> Students = new HashSet<Student>(0);
+	private Set<Question> Questions = new HashSet<Question>(0);
+
 
 	public Qcm() {
 		// TODO Auto-generated constructor stub
@@ -111,6 +119,22 @@ public class Qcm extends ActionForm{
 	 */
 	public void setDifficulty(String difficulty) {
 		this.difficulty = difficulty;
+	}
+
+	public Set<Student> getStudents() {
+		return Students;
+	}
+
+	public void setStudents(Set<Student> students) {
+		Students = students;
+	}
+
+	public Set<Question> getQuestions() {
+		return Questions;
+	}
+
+	public void setQuestions(Set<Question> questions) {
+		Questions = questions;
 	}
 
 	
