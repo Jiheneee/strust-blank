@@ -17,6 +17,8 @@ public class Qcm extends ActionForm{
 	
 	private Set<Student> Students = new HashSet<Student>(0);
 	private Set<Question> Questions = new HashSet<Question>(0);
+	private Set<Question> StudentQCM = new HashSet<Question>(0);
+
 	private Teacher teacher;
 
 
@@ -147,6 +149,13 @@ public class Qcm extends ActionForm{
 		this.teacher = teacher;
 	}
 
+	public Set<Question> getStudentQCM() {
+		return StudentQCM;
+	}
+
+	public void setStudentQCM(Set<Question> studentQCM) {
+		StudentQCM = studentQCM;
+	}
 	
 	
 	

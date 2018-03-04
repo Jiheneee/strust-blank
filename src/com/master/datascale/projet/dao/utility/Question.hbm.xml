@@ -22,5 +22,6 @@
 		</set>
 		
 		<many-to-one name="qcm" column="idQcm" class="com.master.datascale.projet.bean.Qcm" not-null="true" />
+	
 	</class>
 </hibernate-mapping>

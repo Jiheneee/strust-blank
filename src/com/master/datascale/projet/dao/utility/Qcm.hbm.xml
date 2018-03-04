@@ -27,6 +27,11 @@
 			<one-to-many class="com.master.datascale.projet.bean.Question"/> 
 		</set>
 		
+		 <set name="StudentQCM" table="StudentQCM" inverse="true" cascade="all"> 
+		 	<key column="idQcm" not-null="true" /> 
+			<one-to-many class="com.master.datascale.projet.bean.Student_has_QCM"/> 
+		</set>
+		
 		<many-to-one name="teacher" column="idUser" class="com.master.datascale.projet.bean.Teacher" not-null="true" />
 	</class>
 </hibernate-mapping>
