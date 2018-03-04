@@ -28,7 +28,7 @@
 		</set>
 		
 		 <set name="StudentQCM" table="StudentQCM" inverse="true" cascade="all"> 
-		 	<key column="idQcm" not-null="true" /> 
+		 	<key column="idStudentQCM" not-null="true" /> 
 			<one-to-many class="com.master.datascale.projet.bean.Student_has_QCM"/> 
 		</set>
 		

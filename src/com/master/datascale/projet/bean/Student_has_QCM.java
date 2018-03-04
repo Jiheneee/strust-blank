@@ -2,14 +2,13 @@ package com.master.datascale.projet.bean;
 
 public class Student_has_QCM {
 	
+	private Student student;
 	private Qcm qcm;
-	private int idQcm;
-	private int idEtudiaUser;
+	private int idStudentQCM;
 	
-	public Student_has_QCM(int idQcm, int idEtudiaUser) {
+	public Student_has_QCM( int idEtudiaUser) {
 		super();
-		this.idQcm = idQcm;
-		this.idEtudiaUser = idEtudiaUser;
+		this.setIdStudentQCM(idEtudiaUser);
 	}
 	
 	
@@ -17,23 +16,7 @@ public class Student_has_QCM {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-
-	public int getIdQcm() {
-		return idQcm;
-	}
-	public void setIdQcm(int idQcm) {
-		this.idQcm = idQcm;
-	}
 	
-	public int getIdEtudiaUser() {
-		return idEtudiaUser;
-	}
-	public void setIdEtudiaUser(int idEtudiaUser) {
-		this.idEtudiaUser = idEtudiaUser;
-	}
-
-
 	public Qcm getQcm() {
 		return qcm;
 	}
@@ -41,6 +24,26 @@ public class Student_has_QCM {
 
 	public void setQcm(Qcm qcm) {
 		this.qcm = qcm;
+	}
+
+
+	public Student getStudent() {
+		return student;
+	}
+
+
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+
+
+	public int getIdStudentQCM() {
+		return idStudentQCM;
+	}
+
+
+	public void setIdStudentQCM(int idStudentQCM) {
+		this.idStudentQCM = idStudentQCM;
 	}
 	
 	

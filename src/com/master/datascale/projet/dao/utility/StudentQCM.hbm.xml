@@ -6,15 +6,12 @@
 	
 	<class name="Student_has_QCM" table="StudentQCM">
 		
-		<id name="id" column="idStudentQCM">
+		<id name="idStudentQCM" column="idStudentQCM">
 			<generator class="increment" />
 		</id>
 		
+		<many-to-one name="student" column="idUser" class="com.master.datascale.projet.bean.Student" not-null="true" />
 		<many-to-one name="qcm" column="idQcm" class="com.master.datascale.projet.bean.Qcm" not-null="true" />
-		
-		<set name="Students" table="" inverse="true" cascade="all"> 
-			<key column="idStudentQCM" not-null="true" /> 
-			<one-to-many class="com.master.datascale.projet.bean.Student"/> 
-		</set>
+				
 	</class>
 </hibernate-mapping>
