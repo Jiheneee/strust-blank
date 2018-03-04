@@ -1,8 +1,12 @@
 package com.master.datascale.projet.bean;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Question {
 
 	private Qcm qcm;
+	private Set<Answer> Answers = new HashSet<Answer>(0);
 
 	public Question() {
 		// TODO Auto-generated constructor stub
@@ -94,6 +98,14 @@ public class Question {
 
 	public void setQcm(Qcm qcm) {
 		this.qcm = qcm;
+	}
+
+	public Set<Answer> getAnswers() {
+		return Answers;
+	}
+
+	public void setAnswers(Set<Answer> answers) {
+		Answers = answers;
 	}
 	
 	

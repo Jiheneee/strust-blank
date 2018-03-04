@@ -16,6 +16,10 @@
 
 		<property name="goodAnswer" />
 		
+		<set name="Answers" table="Answer" inverse="true" cascade="all"> 
+			<key column="idAnswer" not-null="true" /> 
+			<one-to-many class="com.master.datascale.projet.bean.Answer"/> 
+		</set>
 		
 		<many-to-one name="qcm" column="idQcm" class="com.master.datascale.projet.bean.Qcm" not-null="true" />
 	</class>

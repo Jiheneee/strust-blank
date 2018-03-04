@@ -1,6 +1,9 @@
 package com.master.datascale.projet.bean;
 
 public class Answer {
+	
+	private Question question;
+
 	/**
 	 * The value of the answer which the student had chosen 
 	 */
@@ -51,6 +54,14 @@ public class Answer {
 	public Answer() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public Question getQuestion() {
+		return question;
+	}
+
+	public void setQuestion(Question question) {
+		this.question = question;
 	}
 	
 	
