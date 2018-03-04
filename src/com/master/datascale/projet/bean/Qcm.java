@@ -47,11 +47,12 @@ public class Qcm extends ActionForm{
 	 * @param name The name of the MCQ
 	 * @param description The description of the MCQ
 	 */
-	public Qcm(String name, String description,String difficulty) {
+	public Qcm(String name, String description,String difficulty,Teacher teacher) {
 		super();
 		this.name = name;
 		this.description = description;
 		this.difficulty = difficulty;
+		this.teacher = teacher;
 	}
 	
 	/***

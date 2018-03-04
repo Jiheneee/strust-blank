@@ -12,8 +12,6 @@
 		<!-- <set name="Answer" table="Answer" inverse="true" lazy="true" fetch="select"> 
 			<key column="id" not-null="true" /> <one-to-many class="Question" /> </set> -->
 
-		<!-- <set name="Question" table="Question" inverse="true" lazy="true" fetch="select"> 
-			<key column="id" not-null="true" /> <one-to-many class="Question" /> </set> -->
 		<property name="entitled" />
 
 		<property name="goodAnswer" />

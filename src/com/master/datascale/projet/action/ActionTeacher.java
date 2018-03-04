@@ -13,6 +13,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.master.datascale.projet.bean.Qcm;
+import com.master.datascale.projet.bean.Teacher;
 import com.master.datascale.projet.dao.IDAOQcm;
 import com.master.datascale.projet.dao.impl.DAOQcm;
 
@@ -38,11 +39,18 @@ public class ActionTeacher extends Action {
 		
 		if(url.equalsIgnoreCase("/createQcm.do"))
 		{
-			List<Qcm> qcms = (List<Qcm>) request.getSession().getAttribute("qcms");
+			List<Qcm> qcms = (List<Qcm>)request.getSession().getAttribute("qcms");
 			
 			IDAOQcm daoQcm = (DAOQcm)context.getBean("DAOQcm");
+			
+			Teacher teacher = (Teacher) request.getSession().getAttribute("user");	
 
 			Qcm donnees = (Qcm)form;
+			
+			System.out.println("La propriÃ©taire: "+teacher);
+			
+			
+			donnees.setTeacher(teacher);
 			
 			daoQcm.save(donnees);
 			
@@ -50,7 +58,7 @@ public class ActionTeacher extends Action {
 			
 			request.getSession().setAttribute("qcms", qcms);
 			
-			System.out.println("Votre identité: "+donnees);
+			System.out.println("Votre identite: "+donnees);
 			
 		}		
 		if(url.equalsIgnoreCase("/qcm_del.do"))

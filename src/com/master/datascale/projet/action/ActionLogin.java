@@ -69,7 +69,7 @@ public class ActionLogin extends Action {
 				request.getSession().removeAttribute("login");
 				request.getSession().removeAttribute("validate");
 				
-				System.out.println("Votre identité: "+donnees);
+				System.out.println("Votre identite: "+donnees);
 
 				if(!check){
 					request.getSession().setAttribute("login",new Boolean(check));
