@@ -5,11 +5,6 @@ import java.util.Set;
 
 import org.apache.struts.action.ActionForm;
 
-/**
- * The Class model of the MCQ
- * @author Joy Jedidja
- *
- */
 public class Qcm extends ActionForm{
 
 	private static final long serialVersionUID = 1L;

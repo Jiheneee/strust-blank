@@ -6,6 +6,8 @@ import java.util.Set;
 public class Question {
 
 	private Qcm qcm;
+	
+	private Set<Student_has_QCM_Question> QuestionStudentQcm = new HashSet<Student_has_QCM_Question>(0);
 
 	private Set<Answer> Answers = new HashSet<Answer>(0);
 
@@ -107,6 +109,14 @@ public class Question {
 
 	public void setAnswers(Set<Answer> answers) {
 		Answers = answers;
+	}
+
+	public Set<Student_has_QCM_Question> getQuestionStudentQcm() {
+		return QuestionStudentQcm;
+	}
+
+	public void setQuestionStudentQcm(Set<Student_has_QCM_Question> questionStudentQcm) {
+		QuestionStudentQcm = questionStudentQcm;
 	}
 	
 	

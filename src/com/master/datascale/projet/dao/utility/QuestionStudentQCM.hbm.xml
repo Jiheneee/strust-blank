@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.master.datascale.projet.bean">
+	
+	<class name="Student_has_QCM_Question" table="QUESTIONStudentQCM">
+		
+		<id name="idQuestionStudentQCM" column="idQuestionStudentQCM">
+			<generator class="increment" />
+		</id>
+		
+		<property name="storeAnswers" />
+		
+		
+		<many-to-one name="question" column="idQuestion" class="com.master.datascale.projet.bean.Question" not-null="true" />
+		<many-to-one name="studentQcm" column="idStudentQcm" class="com.master.datascale.projet.bean.Student_has_QCM" not-null="true" />
+		
+	</class>
+</hibernate-mapping>

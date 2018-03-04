@@ -22,6 +22,10 @@
 		</set>
 		
 		<many-to-one name="qcm" column="idQcm" class="com.master.datascale.projet.bean.Qcm" not-null="true" />
-	
+				
+		<set name="StudentHasQcmHasQuestion" table="StudentHasQcmHasQuestion" inverse="true" cascade="all"> 
+			<key column="idQuestion" not-null="true" /> 
+			<one-to-many class="com.master.datascale.projet.bean.Student_has_QCM_Question"/> 
+		</set>	
 	</class>
 </hibernate-mapping>
