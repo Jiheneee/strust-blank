@@ -10,7 +10,7 @@ public class Student extends User {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	private Set<Qcm> Qcms = new HashSet<Qcm>(0);
+	private Set<Qcm> Qcms = new HashSet<Qcm>();
 	private String numStudent;
 	/**
 	 * Return the number of the Student

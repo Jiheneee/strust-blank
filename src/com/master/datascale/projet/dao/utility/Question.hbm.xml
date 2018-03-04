@@ -18,9 +18,7 @@
 
 		<property name="goodAnswer" />
 		
-		<join table="Qcm" inverse="true">
-			<key column="idQuestion" />
-			<many-to-one name="qcm" column="idQcm" not-null="true" />
-		</join>
+		
+		<many-to-one name="qcm" column="idQcm" class="com.master.datascale.projet.bean.Qcm" not-null="true" />
 	</class>
 </hibernate-mapping>

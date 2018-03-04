@@ -35,15 +35,19 @@
   		<key column="user_id"/>
   		<property name="courseTitle"/>
   		<property name="activated"/>
+  		<set name="Qcms" table="Qcm" inverse="true" lazy="true" fetch="select">
+	  		<key column="idUser"/>
+	  		<many-to-many entity-name="com.master.datascale.projet.bean.Qcm" column="idQcm"/>
+  		</set>
   	</joined-subclass>
   	
   	<joined-subclass name="Student" table="student">
   		<key column="user_id"/>
   		<property name="numStudent"/>
   		<set name="Qcms" table="Qcm" inverse="true" lazy="true" fetch="select">
-  		<key column="idUser"/>
-  		<many-to-many entity-name="com.master.datascale.projet.bean.Qcm" column="idQcm"/>
-  	</set>
+	  		<key column="idUser"/>
+	  		<many-to-many entity-name="com.master.datascale.projet.bean.Qcm" column="idQcm"/>
+  		</set>
   	
   	</joined-subclass>
   
