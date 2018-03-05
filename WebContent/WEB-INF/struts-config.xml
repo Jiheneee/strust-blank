@@ -111,8 +111,6 @@
 <!-- =========================================== Action Mapping Definitions -->
 
     <action-mappings>
-            <!-- Default "Welcome" action -->
-            <!-- Forwards to Welcome.jsp -->
         <action
             path="/Welcome"
             forward="/pages/Accueil.html">

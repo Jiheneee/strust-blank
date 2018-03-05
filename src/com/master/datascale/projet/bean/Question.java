@@ -7,9 +7,6 @@ import org.apache.struts.action.ActionForm;
 
 public class Question extends ActionForm{
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	private Qcm qcm;

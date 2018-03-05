@@ -24,8 +24,9 @@
 		  <input type="text" name="numStudent" placeholder="NumStudent"  class="form-control input-lg" required/>       
           <input type="text" name="firstname" placeholder="FirstName"  class="form-control input-lg" pattern=".{3,}" required/>       
           <input type="text" name="surname" placeholder="LastName"  class="form-control input-lg" pattern=".{3,}" required/>       
-		  <select class="form-control select2" style="width: 100%;" tabindex="-1" aria-hidden="true" name="sex">
-                  <option selected="selected">Man</option>
+		  <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="sex">
+                  <option selected="selected">Choose your sex..</option>
+	              <option>Man</option>
                   <option>Woman</option>
 		  </select>
 		  <input type="text" name="login" placeholder="Login"  class="form-control input-lg" pattern=".{3,}" required/>       

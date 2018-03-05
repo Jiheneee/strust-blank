@@ -9,10 +9,13 @@
 			<generator class="increment" />
 		</id>
 
-		
 		<property name="entitled" />
 
 		<property name="goodAnswer" />
+		
+		
+		<many-to-one name="qcm" column="idQcm" class="com.master.datascale.projet.bean.Qcm" not-null="true" />
+		
 		
 		<set name="Answers" table="Answer" inverse="true" cascade="all"> 
 			<key column="idQuestion" not-null="true" /> 
@@ -20,6 +23,5 @@
 		</set>
 		
 		
-		<many-to-one name="qcm" column="idQcm" class="com.master.datascale.projet.bean.Qcm" not-null="true" />
 	</class>
 </hibernate-mapping>

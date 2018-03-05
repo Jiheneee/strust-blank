@@ -21,14 +21,15 @@
       <section class="login-form">
         <form method="post" action="Register.do" role="login">
 		  <img src="content/img/quizLogin.png" class="img-responsive" alt="" />
-		  <div class="form-group">
+		  	<div class="form-group">
                 
-                <select class="form-control select2" style="width: 100%;" tabindex="-1" aria-hidden="true" name="type">
+                <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="type">
                   <option selected="selected">Student</option>
                   <option>Teacher</option>
                 </select>
-                 </div>
-              <button type="submit" name="save" class="btn btn-lg btn-primary btn-block">Continue</button> 
+                
+             </div>
+              <br><button type="submit" name="save" class="btn btn-lg btn-primary btn-block">Continue</button> 
 		</form>
       </section>  
     </div>

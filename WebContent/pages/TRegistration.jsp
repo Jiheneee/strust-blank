@@ -24,14 +24,18 @@
 		  <input type="text" name="courseTitle" placeholder="courseTitle"  class="form-control input-lg" required/>       
 		  <input type="text" name="firstname" placeholder="FirstName"  class="form-control input-lg" pattern=".{3,}" required/>       
           <input type="text" name="surname" placeholder="LastName"  class="form-control input-lg" pattern=".{3,}" required/>       
-		  <select class="form-control select2" style="width: 100%;" tabindex="-1" aria-hidden="true" name="sex">
-                  <option selected="selected">Man</option>
+		  
+		  <select class="form-control" style="width: 100%;" tabindex="-1" aria-hidden="true" name="sex" placeholder="Sex">
+                  <option selected="selected">Choose your sex...</option>
+                  <option>Man</option>
                   <option>Woman</option>
 		  </select>
+		  
 		  <input type="text" name="login" placeholder="Login"  class="form-control input-lg" pattern=".{3,}" required/>       
 		  <c:if test="${not empty sessionScope.login}">
    				<label style="color: red;">${sessionScope.login}</label>
 		  </c:if>
+		  
 		  <input type="password" name="password" class="form-control input-lg" id="password" placeholder="Password" pattern=".{8,}" required/>          
 		  <button type="submit" name="save" class="btn btn-lg btn-primary btn-block">Save</button> 
 		</form>
