@@ -5,15 +5,18 @@ import java.util.Set;
 
 import org.apache.struts.action.ActionForm;
 
+/**
+ * The Class model of the MCQ
+ * @author Joy Jedidja
+ *
+ */
 public class Qcm extends ActionForm{
 
 	private static final long serialVersionUID = 1L;
 
 	
-	private Set<Student> Students = new HashSet<Student>(0);
-	private Set<Question> Questions = new HashSet<Question>(0);
-	private Set<Question> StudentQCM = new HashSet<Question>(0);
-
+	private Set<Student> Students = new HashSet<Student>();
+	private Set<Question> Questions = new HashSet<Question>();
 	private Teacher teacher;
 
 
@@ -133,6 +136,11 @@ public class Qcm extends ActionForm{
 	}
 
 	public void setQuestions(Set<Question> questions) {
+		for(Question question : questions)
+		{
+			question.setQcm(this);
+		}
+		
 		Questions = questions;
 	}
 
@@ -143,16 +151,6 @@ public class Qcm extends ActionForm{
 	public void setTeacher(Teacher teacher) {
 		this.teacher = teacher;
 	}
-
-	public Set<Question> getStudentQCM() {
-		return StudentQCM;
-	}
-
-	public void setStudentQCM(Set<Question> studentQCM) {
-		StudentQCM = studentQCM;
-	}
-	
-	
 	
 
 }

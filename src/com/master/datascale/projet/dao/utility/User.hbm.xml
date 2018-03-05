@@ -44,10 +44,11 @@
   	<joined-subclass name="Student" table="student">
   		<key column="user_id"/>
   		<property name="numStudent"/>
-  			<set name="StudentsQcm" table="StudentQCM" inverse="true" cascade="all"> 
-			<key column="idStudentQCM" not-null="true" /> 
-			<one-to-many class="com.master.datascale.projet.bean.Student_has_QCM"/> 
-			</set>  	
+<!--   		<set name="Qcms" table="Qcm" inverse="true" lazy="true" fetch="select"> -->
+<!-- 	  		<key column="idUser"/> -->
+<!-- 	  		<many-to-many entity-name="com.master.datascale.projet.bean.Qcm" column="idQcm"/> -->
+<!--   		</set> -->
+  	
   	</joined-subclass>
   
   </class>

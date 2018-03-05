@@ -1,14 +1,20 @@
 package com.master.datascale.projet.bean;
 
-public class Answer {
-	
-	private Question question;
+import org.apache.struts.action.ActionForm;
 
+public class Answer extends ActionForm {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	/**
 	 * The value of the answer which the student had chosen 
 	 */
 
 	private String value;
+	
+	private Question question;
+	
 	/**
 	 * The id of the answer that student had chosen
 	 */
@@ -50,6 +56,18 @@ public class Answer {
 		this.value = value;
 		this.id = id;
 	}
+	
+	public Answer(String value) {
+		super();
+		this.value = value;
+	}
+	
+	
+	public Answer(String value, Question question) {
+		super();
+		this.value = value;
+		this.question = question;
+	}
 
 	public Answer() {
 		super();
@@ -63,6 +81,13 @@ public class Answer {
 	public void setQuestion(Question question) {
 		this.question = question;
 	}
+
+	@Override
+	public String toString() {
+		return "Answer [value=" + value + ", id=" + id + "]";
+	}
+	
+	
 	
 	
 }

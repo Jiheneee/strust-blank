@@ -4,10 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Student extends User {
-	private Qcm qcm;
-	private Set<Student_has_QCM> StudentsQcm = new HashSet<Student_has_QCM>(0);
-
-	
 	
 	/**
 	 * 
@@ -67,22 +63,6 @@ public class Student extends User {
 
 	public void setQcms(Set<Qcm> qcms) {
 		Qcms = qcms;
-	}
-
-	public Qcm getQcm() {
-		return qcm;
-	}
-
-	public void setQcm(Qcm qcm) {
-		this.qcm = qcm;
-	}
-
-	public Set<Student_has_QCM> getStudentsQcm() {
-		return StudentsQcm;
-	}
-
-	public void setStudentsQcm(Set<Student_has_QCM> studentsQcm) {
-		StudentsQcm = studentsQcm;
 	}
 	
 }
